@@ -2,7 +2,7 @@ import { Character } from "./character";
 
 export class Enemy extends Character {
   //TODO: maxHp プロパティを追加する
-  private maxHp: number;
+  readonly maxHp: number; //readonly = 作った後は変更できません
   //TODO: maxHp プロパティの初期化
   constructor(name: string, hp: number) {
     super(name, hp);
@@ -16,7 +16,7 @@ export class Enemy extends Character {
 
   //TODO: ダメージを受ける takeDamage メソッドを追加する
   takeDamage(damage: number): void {
-    this.hp = this.hp - damage;
+    this.hp = this.hp - damage; //this.hp -= damage;
   }
 
   //TODO: 残り HP が 30% 以下の場合、行動を変化させる
