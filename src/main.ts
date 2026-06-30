@@ -7,7 +7,6 @@ import { Archer } from "./archer";
 
 const slime = new Enemy("スライム", 50, 10);
 slime.showStatus();
-slime.attack();
 slime.takeDamage(40);
 slime.showStatus();
 
@@ -21,3 +20,5 @@ for (const member of party) {
   member.showStatus();
   member.attack(slime);
 }
+
+slime.attack(party[0]);
